@@ -11,6 +11,8 @@ public class Grid
         System.out.println(bankLength);
         String answer = wordBank[(int)(Math.random()*bankLength)];
         System.out.println(answer);
+
+        // This one is supposed to print the grid
         System.out.println(chosen.horizGenerate(answer));
 
         // char[] grid
