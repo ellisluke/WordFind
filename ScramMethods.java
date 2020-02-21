@@ -9,15 +9,26 @@ public class ScramMethods
     final int GRID_COLS = 10;
 
     // Placing words horizontally on the grid
-    public char horizGenerate(String ans)
+    public char[][] horizGenerate(String ans)
     {
         int ansLength = ans.length();
         char[][] bank = new char[GRID_ROWS][GRID_COLS];
+        // below chooses coordinates for first letter, makes sure the word fits horizontally
         int insertX = (int)(Math.random()*(GRID_COLS - ansLength));
         int insertY = (int)(Math.random()*(GRID_ROWS - ansLength));
         bank[5][5] = 'S';
+
+        // TODO for loop that first fills the whole array with random alpha chars
+        for (int h = 0, h < GRID_ROWS, h++)
+        {
+            for (int i = 0, i < GRID_COLS, i++)
+            {
+                bank[h][i] = "t";
+            }
+        }
+
         // insert the word to 2d array
-        for (int k = insertX, j = 0; k < GRID_COLS && j < ansLength; k++, j++)
+        for (int k = insertX, k < GRID_COLS, k++)
         {
             bank[insertY][k] = ans.charAt(j);
         };
@@ -26,7 +37,7 @@ public class ScramMethods
             //for ()
         }*/
 
-        return bank[5][5];
+        return bank;
     }
     /*
     // Placing words vertically on the grid
