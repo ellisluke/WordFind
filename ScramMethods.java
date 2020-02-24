@@ -19,16 +19,16 @@ public class ScramMethods
         bank[5][5] = 'S';
 
         // TODO for loop that first fills the whole array with random alpha chars
-        for (int h = 0, h < GRID_ROWS, h++)
+        for (int h = 0; h < GRID_ROWS; h++)
         {
-            for (int i = 0, i < GRID_COLS, i++)
+            for (int i = 0; i < GRID_COLS; i++)
             {
-                bank[h][i] = "t";
+                bank[h][i] = 't';
             }
         }
 
         // insert the word to 2d array
-        for (int k = insertX, k < GRID_COLS, k++)
+        for (int k = insertX, j = 0; k < GRID_COLS; k++, j++)
         {
             bank[insertY][k] = ans.charAt(j);
         };
