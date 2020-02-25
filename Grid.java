@@ -2,10 +2,11 @@ import java.io.*;
 
 public class Grid
 {
-    public int grid()
+    String[] wordBank = {"meal","prize","pie","sang","terrible","whole","finger","pig","final","badly","carefully","deeply","belong","fine","die","perhaps","cow","toy","typical","sheet"
+                            };
+
+    public int[] grid()
     {
-        String[] wordBank = {"meal","prize","pie","sang","terrible","whole","finger","pig","final","badly","carefully","deeply","belong","fine","die","perhaps","cow","toy","typical","sheet"
-                                };
         int bankLength = wordBank.length;
         ScramMethods chosen = new ScramMethods();
         System.out.println(bankLength);
@@ -33,6 +34,10 @@ public class Grid
         // char[] grid
 
 
-        return bankLength;
+        return userOptions;
+    }
+    public String[] getter()
+    {
+        return wordBank;
     }
 }
