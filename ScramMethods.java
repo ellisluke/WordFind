@@ -15,8 +15,8 @@ public class ScramMethods
         char[][] bank = new char[GRID_ROWS][GRID_COLS];
         // below chooses coordinates for first letter, makes sure the word fits horizontally
         int insertX = (int)(Math.random()*(GRID_COLS - ansLength));
-        int insertY = (int)(Math.random()*(GRID_ROWS - ansLength));
-        bank[5][5] = 'S';
+        int insertY = (int)(Math.random()*(GRID_ROWS));
+        // bank[5][5] = 'S';
 
         // TODO for loop that first fills the whole array with random alpha chars
         for (int h = 0; h < GRID_ROWS; h++)
@@ -24,32 +24,71 @@ public class ScramMethods
             for (int i = 0; i < GRID_COLS; i++)
             {
                 bank[h][i] = 't';
+                // System.out.println(bank[h][i]);
             }
         }
 
         // insert the word to 2d array
-        for (int k = insertX, j = 0; k < GRID_COLS; k++, j++)
+        for (int k = insertX, j = 0; k < GRID_COLS && j < ansLength; k++, j++)
         {
             bank[insertY][k] = ans.charAt(j);
+            // System.out.println(bank[insertY][k]);
         };
         /*for (int i = 0, i < GRID_SPACES, i++)
         {
             //for ()
         }*/
 
-        return bank;
-    }
-    /*
-    // Placing words vertically on the grid
-    public char[] vertGenerate(String ans)
-    {
-        char[] bank = new char[10];
-        bank[1] = 'h';
-        bank[2] = 's';
-        bank[3] = 'f';
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
+                System.out.print(bank[i][j]);
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+
         return bank;
     }
 
+    // Placing words vertically on the grid
+    public char[][] vertGenerate(String ans)
+    {
+        // similar set up stuff as above
+        int ansLength = ans.length();
+        char[][] bank = new char[GRID_ROWS][GRID_COLS];
+        int insertX = (int)(Math.random()*(GRID_COLS));
+        int insertY = (int)(Math.random()*(GRID_ROWS - ansLength));
+
+        // TODO for loop that first fills the whole array with RANDOM alpha chars
+        for (int h = 0; h < GRID_ROWS; h++)
+        {
+            for (int i = 0; i < GRID_COLS; i++)
+            {
+                bank[h][i] = 't';
+                // System.out.println(bank[h][i]);
+            }
+        }
+
+        for (int i = insertY, j = 0; i < GRID_COLS && j < ansLength; i++, j++)
+        {
+            bank[i][insertX] = ans.charAt(j);
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
+                System.out.print(bank[i][j]);
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+
+        return bank;
+    }
+/*
     // placing words diagonally on the grid (might not do it if I run out of time)
     public char[] diagGenerate(String ans)
     {
@@ -57,4 +96,6 @@ public class ScramMethods
         bank[1] = 'h';
         return bank;
     } */
+
+    // ADD METHOD FOR PRINTING THE GRID???
 }

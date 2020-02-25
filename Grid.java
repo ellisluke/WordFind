@@ -13,7 +13,9 @@ public class Grid
         System.out.println(answer);
 
         // This one is supposed to print the grid
-        System.out.println(chosen.horizGenerate(answer));
+        chosen.vertGenerate(answer);
+
+        // chosen.horizGenerate(answer);
 
         // char[] grid
 
