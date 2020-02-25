@@ -66,7 +66,8 @@ public class ScramMethods
         {
             for (int i = 0; i < GRID_COLS; i++)
             {
-                bank[h][i] = 't';
+                bank[h][i] = (char)(Math.random()*26 + 'a');
+                // bank[h][i] = 't';
                 // System.out.println(bank[h][i]);
             }
         }
@@ -98,4 +99,6 @@ public class ScramMethods
     } */
 
     // ADD METHOD FOR PRINTING THE GRID???
+    // In general, the beginning of these functions will be similar. Maybe can use some abstraction if there is time
+
 }
