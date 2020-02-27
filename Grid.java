@@ -4,6 +4,7 @@ public class Grid
 {
     String[] wordBank = {"meal","prize","pie","sang","terrible","whole","finger","pig","final","badly","carefully","deeply","belong","fine","die","perhaps","cow","toy","typical","sheet"
                             };
+    String answer;
 
     public int[] grid()
     {
@@ -11,9 +12,9 @@ public class Grid
         ScramMethods chosen = new ScramMethods();
         System.out.println(bankLength);
         int selection = (int)(Math.random()*bankLength);
-        String answer = wordBank[selection];
+        answer = wordBank[selection];
         System.out.println(answer);
-        int[] userOptions = {(int)(Math.random()*bankLength), (int)(Math.random()*bankLength), selection};
+        int[] userOptions = {(int)(Math.random()*selection), (int)((Math.random()*(bankLength - selection)) + selection), selection};
 
         // Shuffle the options
         int counter = (int)(Math.random()*10 + 5);
