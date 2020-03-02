@@ -19,7 +19,7 @@ I used the currentTimeMillis() function, which requests the local time from the 
 players string input. Also, an else if statement is used to check if the user's guess is correct and within the time limit.
 Otherwise, the main class consists mostly of print statements for instructions/aesthetic.
   
-*3 "A-ha" moments*
+**3 "A-ha" moments**
 
 The first "A-ha" moment came during class when we were sharing ideas. Mr. Kiang asked how I would prevent random words
 from being generated in the grid that I did not plan on. I couldn't think of any efficient way to do this, so I changed
