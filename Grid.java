@@ -10,7 +10,7 @@ public class Grid
     {
         int bankLength = wordBank.length;
         ScramMethods chosen = new ScramMethods();
-        System.out.println(bankLength);
+        // System.out.println(bankLength);
         int selection = (int)((Math.random()*bankLength - 1) + 1);
         answer = wordBank[selection];
         int[] userOptions = {(int)(Math.random()*selection - 1), (int)(Math.random()*bankLength), selection};

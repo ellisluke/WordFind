@@ -2,6 +2,11 @@ import java.util.Scanner;
 import java.util.Timer;
 // Try using TimerTask library
 
+// TODO
+// no duplicate answer options
+// double check array range stuff
+// perhaps a better timer system
+
 public class Main
 {
 
@@ -17,9 +22,12 @@ public class Main
         boolean guessed = false;
         long gameStart = System.currentTimeMillis();
         System.out.println("Grid initialized! Timer started! 20 seconds!");
+        System.out.println("");
+
         int[] options = game.grid();
         String ansGetter = game.getter();
-        String ans = "hey";
+
+        System.out.println("");
 
         // Print the options for the player to choose from
         System.out.println("User options: ");
@@ -28,16 +36,16 @@ public class Main
             System.out.print(wordBank[options[i]]);
             System.out.print("     ");
         }
-        System.out.println();
-        System.out.println(System.currentTimeMillis());
-        System.out.print("Your guess? ");
+
+       //  System.out.println(System.currentTimeMillis());
+        System.out.println("Your guess? ");
 
         // System.out.println(guess);
 
         String guess = kb.nextLine();
 
-        System.out.println(guess);
-        System.out.println(ansGetter);
+        // System.out.println(guess);
+        // System.out.println(ansGetter);
 
         if (guess.equals(ansGetter) && (System.currentTimeMillis() - gameStart) < 20000)
         {
