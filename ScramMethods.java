@@ -18,12 +18,12 @@ public class ScramMethods
         int insertY = (int)(Math.random()*(GRID_ROWS));
         // bank[5][5] = 'S';
 
-        // TODO for loop that first fills the whole array with random alpha chars
+        // This for loop that first fills the whole array with random alpha chars
         for (int h = 0; h < GRID_ROWS; h++)
         {
             for (int i = 0; i < GRID_COLS; i++)
             {
-                bank[h][i] = 't';
+                bank[h][i] = (char)(Math.random()*26 + 'a');
                 // System.out.println(bank[h][i]);
             }
         }
@@ -34,11 +34,8 @@ public class ScramMethods
             bank[insertY][k] = ans.charAt(j);
             // System.out.println(bank[insertY][k]);
         };
-        /*for (int i = 0, i < GRID_SPACES, i++)
-        {
-            //for ()
-        }*/
 
+        // prints the bank[][] array with spaces in between
         for (int i = 0; i < 10; i++)
         {
             for (int j = 0; j < 10; j++)
@@ -61,7 +58,7 @@ public class ScramMethods
         int insertX = (int)(Math.random()*(GRID_COLS));
         int insertY = (int)(Math.random()*(GRID_ROWS - ansLength));
 
-        // TODO for loop that first fills the whole array with RANDOM alpha chars
+        // This for loop first fills the whole array with RANDOM alpha chars
         for (int h = 0; h < GRID_ROWS; h++)
         {
             for (int i = 0; i < GRID_COLS; i++)
@@ -72,11 +69,13 @@ public class ScramMethods
             }
         }
 
+        // Inserts the answer word into the array
         for (int i = insertY, j = 0; i < GRID_COLS && j < ansLength; i++, j++)
         {
             bank[i][insertX] = ans.charAt(j);
         }
 
+        // prints the bank[][] array with spaces between each letter
         for (int i = 0; i < 10; i++)
         {
             for (int j = 0; j < 10; j++)
