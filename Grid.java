@@ -8,6 +8,7 @@ public class Grid
 
     public int[] grid()
     {
+        // Amount of values in wordBank
         int bankLength = wordBank.length;
         ScramMethods chosen = new ScramMethods();
         // System.out.println(bankLength);
@@ -25,15 +26,20 @@ public class Grid
             userOptions[1] = temp;
         }
 
+        // Chooses either vertical or horizontal insertion of answer
+        int quick = (int)(Math.random()*100);
+        if (quick > 50)
+        {
+            // Generates grid with answer vertical
+            chosen.vertGenerate(answer);
+        }
+        else
+        {
+            // Generates grid with answer horizontal
+            chosen.horizGenerate(answer);
+        }
 
-        // This one is supposed to print the grid
-
-        // chosen.vertGenerate(answer);
-        chosen.horizGenerate(answer);
-
-        // char[] grid
-
-
+        // Returns the array of indecies for user options
         return userOptions;
     }
 
