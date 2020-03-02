@@ -11,10 +11,9 @@ public class Grid
         int bankLength = wordBank.length;
         ScramMethods chosen = new ScramMethods();
         System.out.println(bankLength);
-        int selection = (int)(Math.random()*bankLength);
+        int selection = (int)((Math.random()*bankLength - 1) + 1);
         answer = wordBank[selection];
-        System.out.println(answer);
-        int[] userOptions = {(int)(Math.random()*selection), (int)((Math.random()*(bankLength - selection)) + selection), selection};
+        int[] userOptions = {(int)(Math.random()*selection - 1), (int)(Math.random()*bankLength), selection};
 
         // Shuffle the options
         int counter = (int)(Math.random()*10 + 5);
@@ -28,17 +27,18 @@ public class Grid
 
 
         // This one is supposed to print the grid
-        chosen.vertGenerate(answer);
 
-        // chosen.horizGenerate(answer);
+        // chosen.vertGenerate(answer);
+        chosen.horizGenerate(answer);
 
         // char[] grid
 
 
         return userOptions;
     }
-    public String[] getter()
+
+    public String getter()
     {
-        return wordBank;
+        return answer;
     }
 }
