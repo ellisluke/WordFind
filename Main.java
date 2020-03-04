@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 // TODO
 // no duplicate answer options
-// double check array range stuff
 // perhaps a better timer system
+// more words, more efficient storate?
+
+// Instructions were good to not know, add rounds then gradually reduce the amount of time
 
 public class Main
 {
@@ -42,11 +44,12 @@ public class Main
         // User guess
         String guess = kb.nextLine();
 
+
         // System.out.println(guess);
         // System.out.println(ansGetter);
 
         // Checks if answer is right && less than 20 seconds have passed
-        if (guess.equals(ansGetter) && (System.currentTimeMillis() - gameStart) < 20000)
+        if (guess.toLowerCase().equals(ansGetter) && (System.currentTimeMillis() - gameStart) < 20000)
         {
             System.out.println("Congratulations! You win!");
         }

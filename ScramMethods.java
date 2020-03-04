@@ -36,15 +36,20 @@ public class ScramMethods
         };
 
         // prints the bank[][] array with spaces in between
+        System.out.println("  - - - - - - - - - -");
         for (int i = 0; i < 10; i++)
         {
+            System.out.print("| ");
             for (int j = 0; j < 10; j++)
             {
                 System.out.print(bank[i][j]);
                 System.out.print(" ");
             }
+            System.out.print("|");
             System.out.println();
         }
+        System.out.print("  - - - - - - - - - -");
+        System.out.println();
 
         return bank;
     }
@@ -76,15 +81,19 @@ public class ScramMethods
         }
 
         // prints the bank[][] array with spaces between each letter
+        System.out.println("  - - - - - - - - - -");
         for (int i = 0; i < 10; i++)
         {
+            System.out.print("| ");
             for (int j = 0; j < 10; j++)
             {
                 System.out.print(bank[i][j]);
                 System.out.print(" ");
             }
+            System.out.print("|");
             System.out.println();
         }
+        System.out.print("  - - - - - - - - - -");
 
         return bank;
     }
