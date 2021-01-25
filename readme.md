@@ -1,6 +1,7 @@
   This project is called WordFind. The purpose is to help players with their eye scanning abilities to pick out words.
 The program generates a 10x10 grid and places a single word from a word bank into the grid randomly. The user is then 
-given 3 option words and they have 20 seconds to find the correct word in the grid.
+given 3 option words and they have 20 seconds to find the correct word in the grid. It is made with Java and played in 
+the console.
 
   WordFind works using 3 classes called Main, Grid, and ScramMethods. The Grid class handles the creation of the grid.
 It randomly selects a word to be put into the grid, selects the users options, and shuffles them. When working on this
